@@ -51,7 +51,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
 
     qtyInputs.forEach(input => {
-        input.addEventListener('input', updateCart);
+        input.addEventListener('input', () => {
+            updateCart();
+            calculateChange(); // Ensure change is calculated after updating cart
+        });
     });
     cashInput.addEventListener('input', calculateChange);
 });
