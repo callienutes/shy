@@ -33,21 +33,22 @@ document.addEventListener('DOMContentLoaded', (event) => {
             const priceKey = `price${index + 1}`;
             const productPrice = prices[priceKey];
             if (qty > 0) {
-                total += qty * productPrice;
-                cartText += `Product ${index + 1} - Quantity: ${qty}, Price: ${(qty * productPrice).toFixed(2)}\n`;
+                const totalPrice = qty * productPrice;
+                total += totalPrice;
+                cartText += `Product ${index + 1} - Quantity: ${qty}, Price: ₱${totalPrice.toFixed(2)}\n`;
             }
         });
 
-        totalInput.value = total.toFixed(2);
+        totalInput.value = `₱${total.toFixed(2)}`;
         cartsTextarea.value = cartText.trim();
         calculateChange(); // Recalculate change whenever cart is updated
     }
 
     function calculateChange() {
-        const total = parseFloat(totalInput.value) || 0;
+        const total = parseFloat(totalInput.value.substr(1)) || 0; // Remove '₱' before parsing
         const cash = parseFloat(cashInput.value) || 0;
         const change = cash - total;
-        changeInput.value = change.toFixed(2);
+        changeInput.value = `₱${change.toFixed(2)}`;
     }
 
     qtyInputs.forEach(input => {
