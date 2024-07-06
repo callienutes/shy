@@ -47,6 +47,26 @@
       background: #f1f1f1;
       font-weight: bold;
     }
+    .quote-box {
+      margin: 20px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background-color: #f9f9f9;
+      display: inline-block;
+    }
+    .quote-button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      background-color: #ffcccb;
+      cursor: pointer;
+    }
+    .quote-button:hover {
+      background-color: #ffb6b9;
+    }
   </style>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
@@ -117,7 +137,33 @@
       <input type="text" class="form-control border-0" id="change" readonly placeholder="Change"/>
     </div>
   </div>
+
+  <div class="row justify-content-center">
+    <div class="col-15 text-center">
+      <div class="quote-box" id="quote-box">
+        <p id="quote">Click the button for a BTS quote!</p>
+      </div>
+      <button class="quote-button" onclick="displayQuote()">Get a BTS Quote</button>
+    </div>
+  </div>
 </div>
+
+<script>
+    const quotes = [
+        "Don't be trapped in someone else's dream.",
+        "Effort makes you. You will regret someday if you don’t do your best now.",
+        "Go on your path, even if you live for a day.",
+        "Live your life. It's yours anyway.",
+        "Maybe I made a mistake yesterday, but yesterday’s me is still me.",
+        "The only time you should ever look back is to see how far you’ve come."
+    ];
+
+    function displayQuote() {
+        const randomIndex = Math.floor(Math.random() * quotes.length);
+        const quoteText = document.getElementById('quote');
+        quoteText.textContent = quotes[randomIndex];
+    }
+</script>
 <script src="app.js"></script>
 </body>
         </html>
