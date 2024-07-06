@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         });
 
         totalInput.value = `₱${total.toFixed(2)}`;
-        cartsTextarea.value = cartText.trim();
+        cartsTextarea.value = cartText.trim(); // Update textarea with current cart details
         calculateChange(); // Recalculate change whenever cart is updated
     }
 
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     qtyInputs.forEach(input => {
         input.addEventListener('input', () => {
-            updateCart();
+            updateCart(); // Update cart details whenever quantity input changes
             calculateChange(); // Ensure change is calculated after updating cart
         });
     });
