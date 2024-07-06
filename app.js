@@ -66,13 +66,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
         "Go on your path, even if you live for a day.",
         "Live your life. It's yours anyway.",
         "Maybe I made a mistake yesterday, but yesterday’s me is still me.",
-        "The only time you should ever look back is to see how far you’ve come."
-        "Even if you’re not perfect, you’re limited edition."
-    "I think that loving yourself is the first step to real love."
-    "You're too young to let the world break you." 
-    "Rather than worrying about the future, wouldn’t it be better to just live and not worry?" 
-    "Don't be afraid. It's okay to lose."
-    "It's not about being perfect. It's about effort. And when you bring that effort every single day, that's where transformation happens. That's how change occurs."
+        "The only time you should ever look back is to see how far you’ve come.",
+        "Even if you’re not perfect, you’re limited edition.",
+        "I think that loving yourself is the first step to real love.",
+        "You're too young to let the world break you.",
+        "Rather than worrying about the future, wouldn’t it be better to just live and not worry?",
+        "Don't be afraid. It's okay to lose.",
+        "It's not about being perfect. It's about effort. And when you bring that effort every single day, that's where transformation happens. That's how change occurs."
     ];
 
     function displayQuote() {
@@ -95,7 +95,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
             Total: ${totalInput.value}
             Cash Tendered: ₱${cashInput.value}
             Change: ${changeInput.value}
-
         `;
         alert('Printing receipt:\n\n' + receiptContent);
         // Implement actual printing logic here
