@@ -42,10 +42,18 @@
       background: #fff;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      height: 400px; /* Adjusted height */
+      font-size: 14px;
+      resize: none;
+      padding: 10px;
     }
     #total, #change {
       background: #f1f1f1;
       font-weight: bold;
+      padding: 10px;
+      width: 100%;
+      margin-top: 10px;
     }
     .quote-box {
       margin: 15px;
@@ -67,13 +75,23 @@
     .quote-button:hover {
       background-color: #ffb6b9;
     }
+    .contact-info {
+      margin-top: 20px;
+    }
+    .contact-info a {
+      display: block;
+      margin-top: 5px;
+    }
+    .print-button {
+      margin-top: 20px;
+    }
   </style>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
 <body>
 <div class="container">
   <div class="row justify-content-center">
-    <div class="col-15 text-center">
+    <div class="col-12 text-center">
       <h2>Shy's BTS Album's Boutique </h2>
       <hr class="hr" />
     </div>
@@ -131,15 +149,22 @@
 
     <div class="col-md-4">
       <label for="carts">Orders</label>
-      <textarea class="form-control" rows="29" id="carts" cols="200" readonly style="width:350px; height:400px; font-size:12px;"></textarea>
+      <textarea class="form-control" rows="10" id="carts" readonly></textarea>
       <input type="text" class="form-control border-0" id="total" readonly placeholder="Total"/>
       <input type="number" class="form-control" id="cash" placeholder="Cash Tendered"/>
       <input type="text" class="form-control border-0" id="change" readonly placeholder="Change"/>
+      <div class="contact-info">
+        <h6>Contact Information:</h6>
+        <p>Facebook: <a href="https://www.facebook.com/lalisamonobanramos?mibextid=ZbWKwL">Shy's BTS Album's Boutique</a></p>
+        <p>Email:shy.btsalbums@gmail.com</p>
+        <p>Phone:09773434166</p>
+      </div>
+      <button class="btn btn-secondary mt-2 print-button" id="print-btn">Print Receipt</button>
     </div>
   </div>
 
   <div class="row justify-content-center">
-    <div class="col-15 text-center">
+    <div class="col-12 text-center">
       <div class="quote-box" id="quote-box">
         <p id="quote">Click the button for a BTS Quote!</p>
       </div>
@@ -155,19 +180,5 @@
         "Go on your path, even if you live for a day.",
         "Live your life. It's yours anyway.",
         "Maybe I made a mistake yesterday, but yesterday’s me is still me.",
-        "The only time you should ever look back is to see how far you’ve come."
-      "You should build your own goals and dreams. I think it’s important to make your own story."
-  "Live however you want, it's your life anyway. Stop trying, it’s okay to lose."
-  "Life is tough, and things don’t always work out well, but we should be brave and go on with our lives."
-  "Love yourself, speak yourself."
-    ];
-
-    function displayQuote() {
-        const randomIndex = Math.floor(Math.random() * quotes.length);
-        const quoteText = document.getElementById('quote');
-        quoteText.textContent = quotes[randomIndex];
-    }
-</script>
-<script src="app.js"></script>
-</body>
-        </html>
+        "The only time you should ever look back is to see how far you’ve come.",
+        "You should build your own goals and dreams
