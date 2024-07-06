@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         price4: 100.00,
         price5: 180.00,
         price6: 200.00,
-        price7: 100.00
+        price7: 100.00,
     };
 
     const qtyInputs = [
@@ -58,4 +58,22 @@ document.addEventListener('DOMContentLoaded', (event) => {
         });
     });
     cashInput.addEventListener('input', calculateChange);
+
+    // Quotes functionality
+    const quotes = [
+        "Don't be trapped in someone else's dream.",
+        "Effort makes you. You will regret someday if you don’t do your best now.",
+        "Go on your path, even if you live for a day.",
+        "Live your life. It's yours anyway.",
+        "Maybe I made a mistake yesterday, but yesterday’s me is still me.",
+        "The only time you should ever look back is to see how far you’ve come."
+    ];
+
+    function displayQuote() {
+        const randomIndex = Math.floor(Math.random() * quotes.length);
+        const quoteText = document.getElementById('quote');
+        quoteText.textContent = quotes[randomIndex];
+    }
+
+    document.querySelector('.quote-button').addEventListener('click', displayQuote);
 });
