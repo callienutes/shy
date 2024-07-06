@@ -76,4 +76,26 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
 
     document.querySelector('.quote-button').addEventListener('click', displayQuote);
+
+    // Print receipt functionality
+    const printBtn = document.getElementById('print-btn');
+    printBtn.addEventListener('click', () => {
+        const receiptContent = `
+            ========================
+            Shy's BTS Album's Boutique
+            ========================
+            ${cartsTextarea.value}
+
+            Total: ${totalInput.value}
+            Cash Tendered: ₱${cashInput.value}
+            Change: ${changeInput.value}
+
+            Contact Information:
+            Facebook: Shy's BTS Album's Boutique
+            Email: shy.btsalbums@gmail.com
+            Phone:09773434166
+        `;
+        alert('Printing receipt:\n\n' + receiptContent);
+        // You can customize the printing functionality here
+    });
 });
