@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     document.querySelector('.quote-button').addEventListener('click', displayQuote);
 
-    // Print receipt functionality
+    // Print Receipt
     const printBtn = document.getElementById('print-btn');
     printBtn.addEventListener('click', () => {
         const receiptContent = `
@@ -93,9 +93,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
             Contact Information:
             Facebook: Shy's BTS Album's Boutique
             Email: shy.btsalbums@gmail.com
-            Phone:09773434166
+            Phone: +1 123-456-7890
         `;
         alert('Printing receipt:\n\n' + receiptContent);
-        // You can customize the printing functionality here
+        // Implement actual printing logic here
     });
 });
