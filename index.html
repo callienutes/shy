@@ -28,7 +28,6 @@
       padding: 20px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       transition: transform 0.2s;
-      height: 100%; /* Ensures each card has equal height */
     }
     .product-card:hover {
       transform: scale(1.05);
@@ -37,8 +36,7 @@
       border-radius: 20px;
     }
     .form-control {
-      margin-top: 10px; /* Adjusted margin */
-      margin-bottom: 10px; /* Added margin */
+      margin-top: 20px;
     }
     #carts {
       background: #fff;
@@ -57,37 +55,36 @@
       width: 100%;
       margin-top: 10px;
     }
-    .quote-box {
-      margin: 15px;
-      padding: 15px;
-      border: 1px solid #ddd;
-      border-radius: 15px;
-      background-color: #fce4ec; /* Light pink */
-      display: inline-block;
-      color: #4a154b; /* Purple */
-      font-size: 18px;
-      text-align: center;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
+.quote-box {
+    margin: 15px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    background-color: #fce4ec; /* Light pink */
+    display: inline-block;
+    color: #4a154b; /* Purple */
+    font-size: 18px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
-    .quote-button {
-      margin-top: 20px;
-      padding: 15px 30px;
-      font-size: 16px;
-      border: none;
-      border-radius: 25px; /* Rounded shape */
-      background-color: #f08ab4; /* Soft pink */
-      cursor: pointer;
-      color: #fff; /* White */
-      font-weight: bold;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      transition: background-color 0.3s ease;
-    }
+.quote-button {
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px; /* Rounded shape */
+    background-color: #f08ab4; /* Soft pink */
+    cursor: pointer;
+    color: #fff; /* White */
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
 
-    .quote-button:hover {
-      background-color: #d45087; /* Darker pink on hover */
+.quote-button:hover {
+    background-color: #d45087; /* Darker pink on hover */
     }
-
     .contact-info {
       margin-top: 20px;
     }
@@ -105,78 +102,71 @@
 <body>
 <div class="container">
   <div class="row justify-content-center">
-    <div class="col-12 text-center mb-4"> <!-- Added margin-bottom -->
+    <div class="col-12 text-center">
       <h2>Shy's BTS Album's Boutique </h2>
       <hr class="hr" />
     </div>
   </div>
 
   <div class="row justify-content-center">
-    <div class="col-md-4 mb-4">
-      <div class="product-card text-center">
-        <label id="product1">Jungkook "Golden" Album</label>
-        <img src="Jungkook.jpg" style="width:300px; height:400px;" class="img-thumbnail"/>
-        <label for="product1" id="price1">₱150.00</label>
-        <input type="number" class="form-control" id="qty1" placeholder="Enter quantity"/>
-      </div>
+    <div class="col-md-4 text-center mb-4">
+      <label id="product1">Jungkook "Golden" Album</label>
+      <img src="Jungkook.jpg" style="width:400px; height:500px;" class="img-thumbnail"/>
+      <label for="product1" id="price1">₱150.00</label>
+      <input type="number" class="form-control" id="qty1" placeholder="Enter quantity"/>
     </div>
   
-    <div class="col-md-4 mb-4">
-      <div class="product-card text-center">
-        <label id="product2">Taehyung "Layover" Album</label>
-        <img src="Taehyung.jpg" style="width:300px; height:400px;" class="img-thumbnail"/>
-        <label for="product2" id="price2">₱120.00</label>
-        <input type="number" class="form-control" id="qty2" placeholder="Enter quantity"/>
-      </div>
+    <div class="col-md-4 text-center mb-4">
+      <label id="product2">Taehyung "Layover" Album</label>
+      <img src="Taehyung.jpg" style="width:400px; height:500px;" class="img-thumbnail"/>
+      <label for="product2" id="price2">₱120.00</label>
+      <input type="number" class="form-control" id="qty2" placeholder="Enter quantity"/>
     </div>
   
-    <div class="col-md-4 mb-4">
-      <div class="product-card text-center">
-        <label id="product3">Jimin "Face" Album</label>
-        <img src="Jimin.jpg" style="width:300px; height:400px;" class="img-thumbnail"/>
-        <label for="product3" id="price3">₱140.00</label>
-        <input type="number" class="form-control" id="qty3" placeholder="Enter quantity"/>
-      </div>
+    <div class="col-md-4 text-center mb-4">
+      <label id="product3">Jimin "Face" Album</label>
+      <img src="Jimin.jpg" style="width:400px; height:500px;" class="img-thumbnail"/>
+      <label for="product3" id="price3">₱140.00</label>
+      <input type="number" class="form-control" id="qty3" placeholder="Enter quantity"/>
     </div>
-  </div>
 
-  <div class="row justify-content-center">
-    <div class="col-md-4 mb-4">
-      <div class="product-card text-center">
-        <label id="product4">Jhope "In the Box" Album</label>
-        <img src="Jhope.jpg" style="width:300px; height:400px;" class="img-thumbnail"/>
-        <label for="product4" id="price4">₱100.00</label>
-        <input type="number" class="form-control" id="qty4" placeholder="Enter quantity"/>
-      </div>
+    <div class="col-md-4 text-center mb-4">
+      <label id="product4">Jhope "In the Box" Album</label>
+      <img src="Jhope.jpg" style="width:400px; height:500px;" class="img-thumbnail"/>
+      <label for="product4" id="price4">₱100.00</label>
+      <input type="number" class="form-control" id="qty4" placeholder="Enter quantity"/>
     </div>
-  
-    <div class="col-md-4 mb-4">
-      <div class="product-card text-center">
-        <label id="product5">Suga "D-Day" Album</label>
-        <img src="Suga.jpg" style="width:300px; height:400px;" class="img-thumbnail"/>
-        <label for="product5" id="price5">₱180.00</label>
-        <input type="number" class="form-control" id="qty5" placeholder="Enter quantity"/>
-      </div>
-    </div>
-  
-    <div class="col-md-4 mb-4">
-      <div class="product-card text-center">
-        <label id="product6">Rm "Indigo" Album</label>
-        <img src="Rm.jpg" style="width:300px; height:400px;" class="img-thumbnail"/>
-        <label for="product6" id="price6">₱200.00</label>
-        <input type="number" class="form-control" id="qty6" placeholder="Enter quantity"/>
-      </div>
-    </div>
-  </div>
 
-  <div class="row justify-content-center">
-    <div class="col-md-4 mb-4">
-      <div class="product-card text-center">
-        <label id="product7">Jin "The Astronaut" Album</label>
-        <img src="Jin.jpg" style="width:300px; height:400px;" class="img-thumbnail"/>
-        <label for="product7" id="price7">₱100.00</label>
-        <input type="number" class="form-control" id="qty7" placeholder="Enter quantity"/>
+    <div class="col-md-4 text-center mb-4">
+      <label id="product5">Suga "D-Day" Album</label>
+      <img src="Suga.jpg" style="width:400px; height:500px;" class="img-thumbnail"/>
+      <label for="product5" id="price5">₱180.00</label>
+      <input type="number" class="form-control" id="qty5" placeholder="Enter quantity"/>
+    </div>
+
+    <div class="col-md-4 text-center mb-4">
+      <label id="product6">Rm "Indigo" Album</label>
+      <img src="Rm.jpg" style="width:400px; height:500px;" class="img-thumbnail"/>
+      <label for="product6" id="price6">₱200.00</label>
+      <input type="number" class="form-control" id="qty6" placeholder="Enter quantity"/>
+    </div>
+
+    <div class="col-md-4 text-center mb-4">
+      <label id="product7">Jin "The Astronaut" Album</label>
+      <img src="Jin.jpg" style="width:400px; height:500px;" class="img-thumbnail"/>
+      <label for="product7" id="price7">₱100.00</label>
+      <input type="number" class="form-control" id="qty7" placeholder="Enter quantity"/>
+    </div>
+
+    <div class="col-md-4">
+      <label for="carts">Orders</label>
+      <textarea class="form-control" rows="10" id="carts" readonly></textarea>
+      <input type="text" class="form-control border-0" id="total" readonly placeholder="Total"/>
+      <input type="number" class="form-control" id="cash" placeholder="Cash Tendered"/>
+      <input type="text" class="form-control border-0" id="change" readonly placeholder="Change"/>
+      <div class="contact-info">
       </div>
+      <button class="btn btn-secondary mt-2 print-button" id="print-btn">Print Receipt</button>
     </div>
   </div>
 
@@ -188,9 +178,8 @@
       <button class="quote-button" onclick="displayQuote()">Get a BTS Quote</button>
     </div>
   </div>
-  
 </div>
 
 <script src="app.js"></script>
 </body>
-  </html>
+        </html>
